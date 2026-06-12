@@ -1,7 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme{
+--font-pt-serif: "PT Serif", serif;
+}
+
 body {
   margin: 0;
-  padding-left: 5%;
-  padding-right: 5%;
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body * {
+  position: relative;
+  z-index: 1;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.875);
+  z-index: 0;
 }
 
 /* CSS POUR LE HEADER */
