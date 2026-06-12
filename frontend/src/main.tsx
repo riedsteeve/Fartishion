@@ -8,12 +8,11 @@ import Footer from './Components/Landingpage/footer.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className="min-h-screen px-5 w-full">
+    <div className="min-h-screen px-3 sm:px-5 w-full">
       <Navbar />
       <Hero />
       <Discover />
     </div>
-          <Footer />
-
+    <Footer />
   </StrictMode>,
 )
