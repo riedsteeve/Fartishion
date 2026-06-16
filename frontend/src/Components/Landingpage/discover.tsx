@@ -1,4 +1,5 @@
-import imagePartition from '../../assets/images/Sans titre.jpg'
+import imagePartition from '../../../public/images/riverFlows.svg'
+import jireh from '../../../public/images/Jireh.svg'
 import PsaumeDelaCreaton from '../../../public/images/psaume-creation.svg'
 import fureElise from '../../../public/images/BeethovenFureElise.jpg'
 import Interstellar from '../../../public/images/interstaller.svg'
@@ -6,10 +7,10 @@ import ClairDeLune from '../../../public/images/Au claire de lune.webp'
 import { AiOutlineRight } from "react-icons/ai";
 
 const partitions = [
-    { id: 1, name: "Test name 1", image: imagePartition, lien: "https://test-image1" },
+    { id: 1, name: "Jireh - Chandler Moore", image: jireh, lien: "https://test-image1" },
     { id: 2, name: "Psaume de la Création - Patrick Richard", image: PsaumeDelaCreaton, lien: "https://test-image2" },
     { id: 3, name: "Für Elise - Ludwig van Beethoven", image: fureElise, lien: "https://test-image3" },
-    { id: 4, name: "Interstellar Main Theme – Hans Zimmer", image: Interstellar, lien: "https://test-image1" },
+    { id: 4, name: "Interstellar Main Theme - Hans Zimmer", image: Interstellar, lien: "https://test-image1" },
     { id: 5, name: "Clair de lune - Claude Debussy", image: ClairDeLune, lien: "https://test-image2" },
     { id: 6, name: "River Flows in You - Yiruma", image: imagePartition, lien: "https://test-image3" },
         

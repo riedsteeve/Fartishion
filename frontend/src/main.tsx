@@ -4,6 +4,7 @@ import './index.css'
 import Navbar from './Components/Landingpage/header.tsx'
 import Hero from './Components/Landingpage/hero.tsx'
 import Discover from './Components/Landingpage/discover.tsx'
+import WhyChooseUs from './Components/Landingpage/whyChooseUs.tsx'
 import Footer from './Components/Landingpage/footer.tsx'
 
 createRoot(document.getElementById('root')!).render(
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')!).render(
       <Navbar />
       <Hero />
       <Discover />
+      <WhyChooseUs />
     </div>
     <Footer />
   </StrictMode>,
