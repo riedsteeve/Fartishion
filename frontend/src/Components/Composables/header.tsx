@@ -5,8 +5,8 @@ import { GiMusicalNotes } from "react-icons/gi";
 
 const links = [
   { id: 1, name: "Accueil", href: "/" },
-  { id: 2, name: "Partitions", href: "/" },
-  { id: 3, name: "À propos", href: "/" },
+  { id: 2, name: "Partitions", href: "/partitions" },
+  { id: 3, name: "À propos", href: "/about" },
 ];
 
 const Navbar = () => {

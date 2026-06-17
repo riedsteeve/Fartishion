@@ -21,15 +21,15 @@ const supports = [
 ]
 
 const socials = [
-    { id: 1, name: 'Whatsapp',  href: 'tel:+33 06 20 05 77 67 / +33 01 23 45 78', icon: RiWhatsappFill, color: "hover:text-green-300"},
-    { id: 2, name: 'Instagram', href: 'https:fartishion.insta.com', icon: AiFillInstagram, color: "hover:text-pink-400"},
-    { id: 3, name: 'Téléphone', href: '+33 06 20 05 77 67' , icon: BsTelephoneInboundFill,color: "hover:text-blue-300"},
+    { id: 1, name: 'Whatsapp',  href: 'tel:+33 06 20 05 77 67 / +33 01 23 45 78', icon: RiWhatsappFill, color: "hover:text-green-500"},
+    { id: 2, name: 'Instagram', href: 'https:fartishion.insta.com', icon: AiFillInstagram, color: "hover:text-pink-500"},
+    { id: 3, name: 'Téléphone', href: '+33 06 20 05 77 67' , icon: BsTelephoneInboundFill,color: "hover:text-blue-500"},
 ]
 
 
 const Footer = () => {
   return (
-    <div className="bg-purple-900 mt-5 p-10 text-white">
+    <div className="bg-purple-900 mt-5 p-10 text-white w-full overflow-hidden">
 
       {/* TOP SECTION */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
