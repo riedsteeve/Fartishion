@@ -60,4 +60,19 @@ namespace backend.Services
             return tokenHandler.WriteToken(token);
         }
     }
+
+
+    //Une fonction pour récupérer l'Id de l'utilisateur connecté à partir du token JWT
+    public static class AuthServiceUserConnectedUserVerify
+    {
+        public static long? GetConnectedUserId(HttpContext httpContext)
+        {
+            var userIdClaim = httpContext.User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+            if (userIdClaim != null && long.TryParse(userIdClaim.Value, out long userId))
+            {
+                return userId;
+            }
+            return null;
+        }
+    }
 }

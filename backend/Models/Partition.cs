@@ -10,6 +10,7 @@ public partial class Partition
     public DateTime CreatedAt { get; set; }
 
     public string Nom { get; set; } = null!;
+    public string? Description { get; set; }
 
     public string Auteur { get; set; } = null!;
 
@@ -18,7 +19,7 @@ public partial class Partition
     public DateTime UpdatedAt { get; set; }
 
     public bool IsDeleted { get; set; }
-
+    public long UserId { get; set; }
     public virtual Category? Category { get; set; }
 
     public virtual User IdNavigation { get; set; } = null!;
