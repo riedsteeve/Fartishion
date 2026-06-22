@@ -10,6 +10,7 @@ const links = [
   { id: 3, name: "À propos", href: "/a-propos" },
 ];
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

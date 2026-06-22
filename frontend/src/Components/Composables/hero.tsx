@@ -1,5 +1,7 @@
 import { BiMusic } from "react-icons/bi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 const Hero = () => {
     return (
         <div className="relative w-full px-3 sm:px-8 h-auto pt-3 pb-2 sm:pt-4 sm:pb-3 mt-5 rounded">
@@ -15,10 +17,10 @@ const Hero = () => {
                 </p>
             </div>
             <div className="flex items-center justify-center">
-            <button className="bg-purple-600 gap-2 flex items-center font-semibold rounded-full px-4 py-2 mt-3 sm:mt-4 text-white hover:bg-transparent hover:border border-purple-600 hover:text-purple-600 transition">
+            <Link to="/signup" className="bg-purple-600 gap-2 flex items-center font-semibold rounded-full px-4 py-2 mt-3 sm:mt-4 text-white hover:bg-transparent hover:border border-purple-600 hover:text-purple-600 transition">
                 Découvrez les partitions
                 <FaArrowRightLong className="text-xs" />
-            </button>
+            </Link>
             </div>
 
         </div>
