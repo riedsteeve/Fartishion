@@ -1,6 +1,7 @@
 import Header from '../Composables/header'
 import { BiMusic } from 'react-icons/bi'
 import OurMission from '../Composables/ourMission'
+import FartishionEnChiffre from '../Composables/fartishionEnChiffre'
  
 
 const About = () => {
@@ -26,6 +27,8 @@ const About = () => {
             </div>
             
             <OurMission />
+            <FartishionEnChiffre />
+
 
 
         </>
