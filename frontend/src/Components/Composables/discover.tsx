@@ -5,6 +5,7 @@ import fureElise from '../../../public/images/BeethovenFureElise.jpg'
 import Interstellar from '../../../public/images/interstaller.svg'
 import ClairDeLune from '../../../public/images/Au claire de lune.webp'
 import { AiOutlineRight } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const partitions = [
     { id: 1, name: "Jireh - Chandler Moore", image: jireh, lien: "https://test-image1" },
@@ -48,13 +49,13 @@ const Discover = () => {
               />
 
                    {/* Card link - button */}
-              <a
-                href={partition.lien}
+              <Link
+                to={partition.lien}
                 className="mt-5 flex justify-center items-center rounded-full bg-purple-600 border border-purple-600 px-4 py-2 gap-2 text-white"
               >
                       Voir la partition
                       <AiOutlineRight className='text-sm' />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

@@ -2,11 +2,12 @@ import { AiOutlineRight, AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GiMusicalNotes } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const links = [
   { id: 1, name: "Accueil", href: "/" },
   { id: 2, name: "Partitions", href: "/partitions" },
-  { id: 3, name: "À propos", href: "/about" },
+  { id: 3, name: "À propos", href: "/a-propos" },
 ];
 
 const Navbar = () => {
@@ -15,17 +16,17 @@ const Navbar = () => {
   return (
     <div className="relative z-[60] mx-auto mt-6 w-[95%] max-w-6xl overflow-visible">
       <header className="flex items-center justify-between rounded-full bg-white px-4 py-3 shadow-md sm:px-6 lg:px-8">
-        <span className="flex items-center gap-2 text-xl font-bold italic cursor-pointer text-purple-600">
+        <Link to="/" className="flex items-center gap-2 text-xl font-bold italic text-purple-600">
           <GiMusicalNotes className="text-xl" />
-           <a href="">Fartishion</a> 
-        </span>
+          <span>Fartishion</span>
+        </Link>
 
         <ul className="hidden items-center gap-6 lg:flex">
           {links.map((link) => (
             <li key={link.id}>
-              <a href={link.href} className="transition hover:text-purple-600">
+              <Link to={link.href} className="transition hover:text-purple-600">
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -48,13 +49,13 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.id}>
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className="block transition hover:text-purple-600"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
 
