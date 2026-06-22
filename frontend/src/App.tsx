@@ -34,7 +34,6 @@ const Layout = () => {
     </div>
   )
 }
-
 function App() {
   return (
     <BrowserRouter>
