@@ -6,6 +6,7 @@ import LandingPage from './Components/Landingpage/Home.tsx'
 import About from './Components/Landingpage/About.tsx'
 import Header from './Components/Composables/header.tsx'
 import Footer from './Components/Composables/footer.tsx'
+import Signup from './app/pages/Auth/signup.tsx'
 
 const Layout = () => {
   const location = useLocation()
@@ -41,6 +42,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/a-propos" element={<About />} />
+          <Route path='/signup' element={<Signup/>} />
         </Route>
       </Routes>
     </BrowserRouter>
