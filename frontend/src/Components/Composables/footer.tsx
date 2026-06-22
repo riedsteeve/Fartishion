@@ -2,11 +2,12 @@ import { LuMusic } from "react-icons/lu";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTelephoneInboundFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const links = [
-    { id: 1, name: 'Acceuil', href: '/' },
-    { id: 2, name: 'Partitions', href: '/' },
-    { id: 3, name: 'A propos', href: '/' },
+  { id: 1, name: "Accueil", href: "/" },
+  { id: 2, name: "Partitions", href: "/partitions" },
+  { id: 3, name: "À propos", href: "/a-propos" },
 ]
 
 const legals = [
@@ -29,94 +30,82 @@ const socials = [
 
 const Footer = () => {
   return (
-    <div className="bg-purple-900 mt-5 p-10 text-white w-full overflow-hidden">
-
-      {/* TOP SECTION */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        {/* Logo */}
-        <div>
-          <div className="flex gap-2 items-center mb-3">
-            <LuMusic className="bg-purple-400 text-3xl p-1 rounded-sm" />
-            <h2 className="text-xl font-pt-serif">Fartishion</h2>
+    <footer className="mt-6 w-full bg-purple-900 px-6 py-10 text-white sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <div className="mb-3 flex items-center gap-2">
+              <LuMusic className="rounded-sm bg-purple-400 p-1 text-3xl" />
+              <h2 className="font-pt-serif text-xl">Fartishion</h2>
+            </div>
+            <p className="max-w-sm text-sm opacity-80">
+              La plateforme de référence pour tous les musiciens passionnés.
+            </p>
           </div>
 
-          <p className="text-sm opacity-80 max-w-sm">
-            La plateforme de référence pour tous les musiciens passionnés.
-          </p>
+          <div>
+            <h2 className="mb-3 font-bold">Navigation</h2>
+            <ul className="space-y-2">
+              {links.map((link) => (
+                <li key={link.id}>
+                  <Link className="transition hover:text-purple-300" to={link.href}>
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+          <div>
+            <h2 className="mb-3 font-bold">Légal</h2>
+            <ul className="space-y-2">
+              {legals.map((legal) => (
+                <li key={legal.id}>
+                  <Link className="transition hover:text-purple-300" to={legal.href}>
+                    {legal.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="mb-3 font-bold">Support</h2>
+            <ul className="space-y-2">
+              {supports.map((support) => (
+                <li key={support.id}>
+                  <Link className="transition hover:text-purple-300" to={support.href}>
+                    {support.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        {/* Navigation */}
-        <div>
-          <h2 className="font-bold mb-3">Navigation</h2>
-          <ul className="space-y-2">
-            {links.map((link) => (
-              <li key={link.id}>
-                <a className="hover:text-purple-300 transition" href={link.href}>
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Légal */}
-        <div>
-          <h2 className="font-bold mb-3">Légal</h2>
-          <ul className="space-y-2">
-            {legals.map((legal) => (
-              <li key={legal.id}>
-                <a className="hover:text-purple-300 transition" href={legal.href}>
-                  {legal.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Support */}
-        <div>
-          <h2 className="font-bold mb-3">Support</h2>
-          <ul className="space-y-2">
-            {supports.map((support) => (
-              <li key={support.id}>
-                <a className="hover:text-purple-300 transition" href={support.href}>
-                  {support.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* BOTTOM BAR */}
-      <div className="mt-10 pt-5 border-t border-white/20 flex justify-between items-center">
-
-          {/* droits sous le logo */}
-          <p className="text-xs opacity-70 mt-6">
+        <div className="mt-10 flex flex-col gap-4 border-t border-white/20 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs opacity-70">
             © 2026 Fartishion - Tous droits réservés
           </p>
 
-        {/* droite = socials */}
-        <div className="flex gap-4 text-2xl">
-          {socials.map((social) => {
-            const Icon = social.icon;
+          <div className="flex gap-4 text-2xl">
+            {socials.map((social) => {
+              const Icon = social.icon;
 
-            return (
-              <a
-                key={social.id}
-                href={social.href}
-                className={`transition ${social.color}`}
-              >
-                <Icon />
-              </a>
-            );
-          })}
+              return (
+                <a
+                  key={social.id}
+                  href={social.href}
+                  className={`transition ${social.color}`}
+                >
+                  <Icon />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
-
-    </div>
+    </footer>
   );
 };
 

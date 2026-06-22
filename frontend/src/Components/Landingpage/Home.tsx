@@ -1,4 +1,3 @@
-import Header from '../Composables/header'
 import Hero from '../Composables/hero'
 import Discover from '../Composables/discover'
 import WhyChooseUs from '../Composables/whyChooseUs'
@@ -6,11 +5,10 @@ import WhyChooseUs from '../Composables/whyChooseUs'
 const LandingPage = () => {
     return (
         <>
-        <Header />
-        <Hero />
-        <Discover />
-        <WhyChooseUs />
- </>
+            <Hero />
+            <Discover />
+            <WhyChooseUs />
+        </>
     )
 }
 
