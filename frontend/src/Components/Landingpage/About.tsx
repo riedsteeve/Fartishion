@@ -2,6 +2,7 @@ import Header from '../Composables/header'
 import { BiMusic } from 'react-icons/bi'
 import OurMission from '../Composables/ourMission'
 import FartishionEnChiffre from '../Composables/fartishionEnChiffre'
+import NosValeurs from '../Composables/nosValeurs'
  
 
 const About = () => {
@@ -28,6 +29,7 @@ const About = () => {
             
             <OurMission />
             <FartishionEnChiffre />
+            <NosValeurs />
 
 
 
