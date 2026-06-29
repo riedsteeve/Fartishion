@@ -20,6 +20,7 @@ const teamInfos = [
     },
 ]
 
+
 const NotreEquipe = () => {
     return (
         <section className="py-10 px-4">

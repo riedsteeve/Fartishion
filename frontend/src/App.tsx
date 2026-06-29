@@ -2,12 +2,13 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import LandingPage from './components/Landingpage/Home.tsx'
-import About from './components/Landingpage/About.tsx'
-import Header from './components/Composables/header.tsx'
-import Footer from './components/Composables/footer.tsx'
-import Signup from './app/pages/Auth/signup.tsx'
-import Login from './app/pages/Auth/login.tsx'
+import LandingPage from './components/Landing Pages/Home'
+import About from './components/Landing Pages/About'
+import Header from './components/atoms/header'
+import Footer from './components/atoms/footer'
+import Signup from './pages/public/signup'
+import Login from './pages/public/login'
+import Partitions from './pages/public/Partitions/partitions'
 
 const Layout = () => {
   const location = useLocation()
@@ -43,6 +44,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/a-propos" element={<About />} />
+          <Route path='/partitions' element={<Partitions />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login/>}  />
         </Route>

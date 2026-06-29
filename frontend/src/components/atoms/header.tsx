@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative z-[60] mx-auto mt-6 w-[95%] max-w-6xl overflow-visible">
+    <div className="relative z-60 mx-auto mt-6 w-[95%] max-w-6xl overflow-visible">
       <header className="flex items-center justify-between rounded-full bg-white px-4 py-3 shadow-md sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold italic text-purple-600">
           <GiMusicalNotes className="text-xl" />
@@ -46,7 +46,7 @@ const Navbar = () => {
       </header>
 
       {isOpen && (
-        <div className="absolute left-0 right-0 mt-2 top-[calc(100%+0.75rem)] z-[70] origin-top rounded-2xl border border-purple-100 bg-white p-4 shadow-xl animate-[slideDown_0.25s_ease-out] lg:hidden">
+        <div className="absolute left-0 right-0 mt-2 top-[calc(100%+0.75rem)] z-70 origin-top rounded-2xl border border-purple-100 bg-white p-4 shadow-xl animate-[slideDown_0.25s_ease-out] lg:hidden">
           <ul className="flex flex-col gap-4">
             {links.map((link) => (
               <li key={link.id}>

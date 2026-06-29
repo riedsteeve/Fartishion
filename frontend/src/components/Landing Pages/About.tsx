@@ -1,9 +1,9 @@
 import { BiMusic } from 'react-icons/bi'
-import OurMission from '../Composables/ourMission'
-import FartishionEnChiffre from '../Composables/fartishionEnChiffre'
-import NosValeurs from '../Composables/nosValeurs'
-import NotreEquipe from '../Composables/notreEquipe'
-import CTA from '../Composables/cta'
+import OurMission from '../atoms/ourMission'
+import FartishionEnChiffre from '../atoms/fartishionEnChiffre'
+import NosValeurs from '../atoms/nosValeurs'
+import NotreEquipe from '../atoms/notreEquipe'
+import CTA from '../atoms/cta'
 const About = () => {
     return (
         <>

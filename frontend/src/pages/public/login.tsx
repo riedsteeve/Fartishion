@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import { Link } from "react-router-dom";
 import { BiUser } from "react-icons/bi";
-import type { LoginData } from "../../Types/loginType";
+import type { LoginData } from "../../types/loginType";
 
 
 const Login = () => {

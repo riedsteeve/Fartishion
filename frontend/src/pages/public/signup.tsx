@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
-import type { SignupData } from "../../Types/signupType";
+import type { SignupData } from "../../types/signupType";
 
 import { BiUser } from "react-icons/bi";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 
 // Import du Service Signup pour l'inscription
-import { signup } from "../../Services/auth";
+import { signup } from "../../services/auth";
 
 
 
