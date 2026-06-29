@@ -4,7 +4,6 @@ import FartishionEnChiffre from '../Composables/fartishionEnChiffre'
 import NosValeurs from '../Composables/nosValeurs'
 import NotreEquipe from '../Composables/notreEquipe'
 import CTA from '../Composables/cta'
-
 const About = () => {
     return (
         <>

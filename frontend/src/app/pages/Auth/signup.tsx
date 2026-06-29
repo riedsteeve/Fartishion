@@ -1,17 +1,16 @@
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
+import type { SignupData } from "../../Types/signupType";
 
 import { BiUser } from "react-icons/bi";
 import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-// model de donnée que react-hook-form aura à suivre
-type FormData = {
-  nom: string;
-  prenom: string;
-  email: string;
-  mdp: string;
-};
+
+// Import du Service Signup pour l'inscription
+import { signup } from "../../Services/auth";
+
+
 
 
 const Signup = () => {
@@ -23,7 +22,7 @@ const Signup = () => {
     register,
     handleSubmit,
     formState: { errors },
-    } = useForm<FormData>();
+    } = useForm<SignupData>();
     
     // Gestion de l'image pour l'avatar
 
@@ -36,9 +35,16 @@ const Signup = () => {
   };
 
     // fonction pour l'envoie des données
-  const sendData = (data: FormData) => {
-    console.log("FORM DATA :", data);
-    console.log("AVATAR :", avatar);
+    const sendData = async (data: SignupData) => {
+        try {
+          
+            const resp = await signup(data);
+            console.log("SUCCESS : ", resp)
+        } catch (error) {
+            
+            console.log("ERROR : ", error)
+        
+      }
   };
 
   return (
