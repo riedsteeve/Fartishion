@@ -14,7 +14,6 @@
         public string Nom { get; set; } = null!;
         public string? Description { get; set; }
         public string Auteur { get; set; } = null!;
-        public string CheminFichier { get; set; } = null!;
         public long IdCategory { get; set; }
 
     }
