@@ -32,9 +32,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className="hidden items-center gap-2 rounded-full border border-purple-600 px-4 py-2 text-purple-600 transition hover:bg-purple-600 hover:text-white lg:flex">
+        <Link to={"/login"} className="hidden items-center gap-2 rounded-full border border-purple-600 px-4 py-2 text-purple-600 transition hover:bg-purple-600 hover:text-white lg:flex">
           Connexion <AiOutlineRight />
-        </button>
+        </Link>
 
         <button
           className="rounded-full p-2 text-2xl text-purple-600 lg:hidden"

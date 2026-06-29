@@ -1,5 +1,6 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import bgImage from "../../../public/images/cta-image.png";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
     return (
@@ -25,10 +26,10 @@ const CTA = () => {
                     </p>
 
                     <div className="flex justify-center">
-                        <button className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-purple-600 font-semibold transition hover:bg-transparent hover:border border-white hover:text-white cursor-pointer">
+                        <Link to={"/signup"} className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-purple-600 font-semibold transition hover:bg-transparent hover:border border-white hover:text-white cursor-pointer">
                             Découvrez les partitions
                             <FaArrowRightLong className="text-xs" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

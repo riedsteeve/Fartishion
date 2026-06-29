@@ -1,12 +1,8 @@
 import { useForm } from "react-hook-form"
 import { Link } from "react-router-dom";
 import { BiUser } from "react-icons/bi";
+import type { LoginData } from "../../Types/loginType";
 
-
-type loginData = {
-    email: string;
-    mdp: string;
-}
 
 const Login = () => {
 
@@ -14,10 +10,10 @@ const Login = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm<loginData>();
+    } = useForm<LoginData>();
 
 
-    const sendData = (data: loginData) => {
+    const sendData = (data: LoginData) => {
         console.log("Login data : ", data)
     }
 
