@@ -60,6 +60,7 @@ builder.Services.AddAuthentication("Bearer")
 builder.Services.AddAuthorization();
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IPartitionService, PartitionService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<AuthService>();
@@ -86,4 +87,5 @@ app.UseAuthorization();
 app.MapAuthEndpoints();
 app.UserEndpoints();
 app.PartitionEndps();
+app.CategoryEndpoint();
 app.Run();

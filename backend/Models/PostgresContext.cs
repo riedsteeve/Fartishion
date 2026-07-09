@@ -64,6 +64,7 @@ public partial class PostgresContext : DbContext
             entity.Property(e => e.Nom)
                 .HasColumnType("character varying")
                 .HasColumnName("nom");
+            entity.Property(e => e.IsDeleted).HasColumnName("is_deleted");
 
             entity.HasOne(d => d.IdNavigation).WithOne(p => p.Category)
                 .HasForeignKey<Category>(d => d.Id)

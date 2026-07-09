@@ -82,6 +82,10 @@ namespace backend.Endpoints
             }).RequireAuthorization();
 
 
+
+            /// <summary>
+            /// Téléchargement d'un fichier de partition.
+            /// </summary>
             app.MapGet("/Partition/{id}/download", async (long id, IPartitionService partitionService) =>
             {
                 try
@@ -98,6 +102,8 @@ namespace backend.Endpoints
             });
 
 
+
+            //obtenir toutes les partitions par catégorie
             app.MapGet("/Partition/category", async (string category, IPartitionService partitionService) =>
             {
                 var partition = await partitionService.GetPartitionsByCategory(category);
@@ -110,7 +116,6 @@ namespace backend.Endpoints
                     return Results.Ok(partition);
                 }
             });
-
         }
     }
 }
