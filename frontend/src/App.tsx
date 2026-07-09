@@ -9,6 +9,9 @@ import Footer from './components/atoms/footer'
 import Signup from './pages/public/signup'
 import Login from './pages/public/login'
 import Partitions from './pages/public/Partitions/partitions'
+import Legal from './pages/public/legal'
+import Privacy from './pages/public/privacy'
+import Contact from './pages/public/contact'
 
 const Layout = () => {
   const location = useLocation()
@@ -47,6 +50,9 @@ function App() {
           <Route path='/partitions' element={<Partitions />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login/>}  />
+          <Route path='/legal' element={<Legal />} />
+          <Route path='/privacy' element={<Privacy />} />
+          <Route path='/contact' element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
