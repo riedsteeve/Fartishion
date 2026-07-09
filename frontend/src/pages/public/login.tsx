@@ -84,7 +84,9 @@ return (
             bg-linear-to-r from-purple-600 to-purple-500
             hover:from-purple-700 hover:to-purple-600 transition cursor-pointer"
           >
+          <Link to={"/dashboard"}>
             S'inscrire gratuitement
+          </Link>
           </button>
         </form>
 

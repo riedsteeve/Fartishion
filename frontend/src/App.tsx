@@ -1,4 +1,3 @@
-// src/App.tsx
 import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -9,11 +8,14 @@ import Footer from './components/atoms/footer'
 import Signup from './pages/public/signup'
 import Login from './pages/public/login'
 import Partitions from './pages/public/Partitions/partitions'
-import Legal from './pages/public/legal'
-import Privacy from './pages/public/privacy'
+import Legal from './pages/Legacy/legal'
+import Privacy from './pages/Legacy/privacy'
 import Contact from './pages/public/contact'
+import Dashboard_layout from './pages/Private/Dashboard_layout'
+import Partition_View from './components/atoms/private_components/partition_view'
 
-const Layout = () => {
+// 1. Layout Public 
+const PublicLayout = () => {
   const location = useLocation()
 
   useEffect(() => {
@@ -40,11 +42,14 @@ const Layout = () => {
     </div>
   )
 }
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        
+        {/* 2. ROUTES PUBLIQUES : Elles partagent toutes le Header et Footer vitrine */}
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<LandingPage />} />
           <Route path="/a-propos" element={<About />} />
           <Route path='/partitions' element={<Partitions />} />
@@ -54,6 +59,11 @@ function App() {
           <Route path='/privacy' element={<Privacy />} />
           <Route path='/contact' element={<Contact />} />
         </Route>
+
+        {/* 3. ROUTE PRIVÉE : Totalement en dehors du PublicLayout !*/}
+        <Route path='/dashboard' element={<Dashboard_layout />} />
+        <Route path='/partitions_view' element={<Partition_View />} />
+
       </Routes>
     </BrowserRouter>
   )

@@ -26,7 +26,7 @@ const CTA = () => {
                     </p>
 
                     <div className="flex justify-center">
-                        <Link to={"/signup"} className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-purple-600 font-semibold transition hover:bg-transparent hover:border border-white hover:text-white cursor-pointer">
+                        <Link to={"/partitions"} className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-purple-600 font-semibold transition hover:bg-transparent hover:border border-white hover:text-white cursor-pointer">
                             Découvrez les partitions
                             <FaArrowRightLong className="text-xs" />
                         </Link>
