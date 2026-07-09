@@ -1,5 +1,5 @@
 import { FaArrowRightLong } from "react-icons/fa6";
-import bgImage from "../../../public/images/cta-image.png";
+import bgImage from "../../../public/images/cta.png";
 import { Link } from "react-router-dom";
 
 const CTA = () => {

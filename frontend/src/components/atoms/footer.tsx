@@ -11,13 +11,13 @@ const links = [
 ]
 
 const legals = [
-    { id: 1, name: 'Mentions Légales', href: '/' },
-    { id: 2, name: 'Politique de confidentialité', href: '/' },
-    { id: 3, name: 'Cookies', href: '/' },
+    { id: 1, name: 'Mentions Légales', href: '/legal' },
+    { id: 2, name: 'Politique de confidentialité', href: '/privacy' },
+    { id: 3, name: 'Cookies', href: '/privacy' },
 ]
 
 const supports = [
-    { id: 1, name: 'Contact', href: '/' },
+    { id: 1, name: 'Contact', href: '/contact' },
     { id: 2, name: 'FAQ', href: '/' },
 ]
 
