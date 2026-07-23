@@ -5,9 +5,10 @@ using BCrypt.Net;
 
 namespace backend.Services
 {
-    public class UserService(PostgresContext context) : IUserService
+    public class UserService(PostgresContext context, IHttpContextAccessor httpContextAccessor) : IUserService
     {
         private readonly PostgresContext _context = context;
+        private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
 
         //On récupère tout les Users non supprimés
         public async Task<List<UserResponseDTO>> GetAllUsers()
@@ -50,6 +51,13 @@ namespace backend.Services
         //Mise a jour 
         public async Task<UserResponseDTO?> UpdateUser(long id, UserResponseDTO userDto)
         {
+            //on vérifie si le User est connectée et si il n'est pas supprimé
+            var httpContext = _httpContextAccessor.HttpContext;
+            if(httpContext == null) throw new InvalidOperationException("Context HTTP indisponible.");
+
+            long? userId = AuthServiceUserConnectedUserVerify.GetConnectedUserId(httpContext);
+            if (userId == null) throw new UnauthorizedAccessException("Utilisateur non connecté");
+
             var existingUser = await _context.Users.FindAsync(id);
             if (existingUser == null || existingUser.IsDeleted == true)
                 return null;
@@ -67,6 +75,12 @@ namespace backend.Services
         //Supression
         public async Task<UserResponseDTO?> DeleteUser(long id)
         {
+            var httpContext = _httpContextAccessor.HttpContext;
+            if(httpContext == null) throw new InvalidOperationException("Context HTTP indisponible.");
+
+            long? userId = AuthServiceUserConnectedUserVerify.GetConnectedUserId(httpContext);
+            if (userId == null) throw new UnauthorizedAccessException("Utilisateur non connecté");
+
             var user = await _context.Users.FindAsync(id);
             if (user == null || user.IsDeleted == true)
                 return null;
