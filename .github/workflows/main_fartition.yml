@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - Fartition
 on:
   push:
     branches:
-      - main:
+      - main
     paths:
       - 'backend/**'
   workflow_dispatch:
@@ -16,6 +16,10 @@ jobs:
     runs-on: windows-latest
     permissions:
       contents: read #This is required for actions/checkout
+
+    defaults:
+      run:
+        working-directory: ./backend
 
     steps:
       - uses: actions/checkout@v4
