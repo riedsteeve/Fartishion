@@ -3,6 +3,7 @@ using backend.DTO;
 using Microsoft.EntityFrameworkCore;
 using BCrypt.Net;
 
+
 namespace backend.Services
 {
     public class UserService(PostgresContext context, IHttpContextAccessor httpContextAccessor) : IUserService
